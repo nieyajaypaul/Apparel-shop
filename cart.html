@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Cart</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* checkout box */
+
+.checkout-box{
+display:none;
+margin-top:30px;
+background:white;
+padding:20px;
+width:60%;
+margin-left:auto;
+margin-right:auto;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.payment-options{
+margin-top:15px;
+}
+
+.payment-options label{
+display:block;
+margin:10px 0;
+font-size:16px;
+}
+
+.pay-btn{
+margin-top:20px;
+padding:10px 20px;
+background:#28a745;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+.checkout-btn{
+margin-top:20px;
+padding:10px 20px;
+background:#ff9800;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>Your Cart</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+</nav>
+
+</header>
+
+<h2 style="text-align:center; margin-top:20px;">Shopping Cart</h2>
+
+<div style="padding:20px;">
+
+<table id="cartTable" border="1" cellpadding="10" style="margin:auto; width:80%; background:white;">
+<thead>
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Total</th>
+</tr>
+</thead>
+
+<tbody>
+</tbody>
+
+</table>
+
+<h2 id="grandTotal" style="text-align:center; margin-top:20px;"></h2>
+
+<div style="text-align:center; margin-top:20px;">
+
+<button onclick="clearCart()" style="padding:10px; background:red; color:white; border:none; cursor:pointer;">
+Empty Cart
+</button>
+
+<br><br>
+
+<button class="checkout-btn" onclick="showCheckout()">
+Proceed to Checkout
+</button>
+
+</div>
+
+</div>
+
+
+<!-- Checkout Section -->
+
+<div class="checkout-box" id="checkoutBox">
+
+<h2 style="text-align:center;">Payment Options</h2>
+
+<div class="payment-options">
+
+<label>
+<input type="radio" name="payment"> UPI (Google Pay / PhonePe / Paytm)
+</label>
+
+<label>
+<input type="radio" name="payment"> Debit / Credit Card
+</label>
+
+<label>
+<input type="radio" name="payment"> Net Banking
+</label>
+
+<label>
+<input type="radio" name="payment"> Cash on Delivery
+</label>
+
+</div>
+
+<div style="text-align:center;">
+<button class="pay-btn" onclick="confirmPayment()">
+Confirm Payment
+</button>
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+<script>
+
+function showCheckout(){
+document.getElementById("checkoutBox").style.display="block";
+}
+
+function confirmPayment(){
+alert("Payment Successful! Your order has been placed.");
+localStorage.removeItem("cart");
+location.reload();
+}
+
+</script>
+
+</body>
+</html>
