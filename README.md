@@ -33,3 +33,25 @@ Shopping cart with total price calculation
 Checkout and payment options
 
 Responsive and simple interface for easy use
+
+Overview of Pages
+
+The Online Apparel Shop website consists of multiple web pages designed to provide a simple and user-friendly shopping experience. Each page has a specific function that helps users navigate the website, browse products, and complete purchases.
+
+Home Page (index.html)
+
+The Home Page serves as the main entry point of the website. It provides a welcome message and introduces users to the Online Apparel Shop. The page also contains a navigation menu that allows users to easily move to other sections such as the Products page and the Cart page. It highlights the purpose of the website and encourages users to explore the available products.
+
+Products Page (products.html)
+
+The Products Page displays the available apparel items along with their images, names, and prices. Users can select the quantity of the product they wish to purchase and add it to their shopping cart using the “Add to Cart” button. This page helps users browse and choose the clothing items they want to buy.
+
+Cart Page (cart.html)
+
+The Cart Page shows all the products that the user has added from the products page. It displays the product name, price, quantity, and the total price for each item. The page also calculates and displays the overall amount to be paid. Users have options to empty the cart or proceed to checkout.
+
+Checkout and Payment Section
+
+The checkout section allows users to review their selected products and proceed with the payment process. The website provides multiple payment options such as UPI, debit or credit card, net banking, and cash on delivery. Once the payment is confirmed, the order is successfully placed.
+
+
